@@ -128,7 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 # This production code might break development mode, so we check whether we're in DEBUG mode
 if not DEBUG:
     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
@@ -143,7 +143,7 @@ if not DEBUG:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 cloudinary.config(
-    cloud_name = os.environ.get('dl4omangg'),
-    api_key = os.environ.get('674324495521555'),
-    api_secret = os.environ.get('WTf3LGfyM0dGJK__wk-_4vsmxbI'),
+      cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'),
+      api_key = os.environ.get('CLOUDINARY_API_KEY'),
+      api_secret = os.environ.get('CLOUDINARY_API_SECRET'),
 )
